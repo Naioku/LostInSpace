@@ -1,0 +1,47 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+namespace Movement
+{
+    public class PlayerMover : MonoBehaviour
+    {
+        [SerializeField] private float thrustSpeed = 1f;
+        [SerializeField] private float rotationSpeed = 1f;
+
+        private Rigidbody _rigidbody;
+        private float _thrustInput;
+        private float _rotationInput;
+
+        void Start()
+        {
+            _rigidbody = GetComponent<Rigidbody>();
+        }
+
+        void Update()
+        {
+            ManageThrust();
+            ManageRotation();
+        }
+
+        private void ManageThrust()
+        {
+            _rigidbody.AddRelativeForce(new Vector3(0f, _thrustInput * thrustSpeed, 0f));
+        }
+
+        private void ManageRotation()
+        {
+            transform.Rotate(new Vector3(0f, 0f, -_rotationInput * rotationSpeed * Time.deltaTime));
+        }
+
+        private void OnThrust(InputValue value)
+        {
+            _thrustInput = value.Get<float>();
+        }
+
+        private void OnRotate(InputValue value)
+        {
+            _rotationInput = value.Get<float>();
+            print(_rotationInput);
+        }
+    }
+}
