@@ -691,9 +691,10 @@ GameObject:
   - component: {fileID: 281069709}
   - component: {fileID: 281069712}
   - component: {fileID: 281069710}
+  - component: {fileID: 281069713}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -775,7 +776,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c4901ced92b59442869029dc1823349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrustSpeed: 2
+  thrustSpeed: 3
+  rotationSpeed: 100
+--- !u!114 &281069713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339886326442536551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc7dfc660dd9dc44b2954577de31eaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &1339886326509226652
 GameObject:
   m_ObjectHideFlags: 0

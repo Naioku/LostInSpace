@@ -30,7 +30,9 @@ namespace Movement
 
         private void ManageRotation()
         {
+            _rigidbody.freezeRotation = true;
             transform.Rotate(new Vector3(0f, 0f, -_rotationInput * rotationSpeed * Time.deltaTime));
+            _rigidbody.freezeRotation = false;
         }
 
         private void OnThrust(InputValue value)
@@ -41,7 +43,6 @@ namespace Movement
         private void OnRotate(InputValue value)
         {
             _rotationInput = value.Get<float>();
-            print(_rotationInput);
         }
     }
 }
