@@ -1,7 +1,7 @@
 using Core;
 using UnityEngine;
 
-namespace Collisions
+namespace Obstacles
 {
     public class Obstacle : MonoBehaviour
     {
