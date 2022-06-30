@@ -6,6 +6,7 @@ namespace Obstacles
     {
         [SerializeField] private Vector3 movementVector;
         [SerializeField] [Range(0f, 1f)] private float movementFactor;
+        [SerializeField] [Range(0f, 1f)] private float movementOffset;
         [SerializeField] private float period = 2f;
 
         private Vector3 _startingPosition;
@@ -17,7 +18,7 @@ namespace Obstacles
 
         private void Update()
         {
-            float cycles = Time.time / period; // frame independent because of Time.time;
+            float cycles = Time.time / period + movementOffset; // frame independent because of Time.time;
             const float tau = Mathf.PI * 2;
             float rawSinWave = Mathf.Sin(tau * cycles);
 

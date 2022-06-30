@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Collisions
+namespace Platforms
 {
     public class FinishPlatform : MonoBehaviour
     {

@@ -18,6 +18,7 @@ namespace Obstacles
                 print("No Health component!");
                 return;
             }
+            
             health.TakeDamage(damageValue);
         }
     }

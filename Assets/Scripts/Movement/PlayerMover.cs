@@ -25,7 +25,7 @@ namespace Movement
 
         private void ManageThrust()
         {
-            _rigidbody.AddRelativeForce(new Vector3(0f, _thrustInput * thrustSpeed, 0f));
+            _rigidbody.AddRelativeForce(new Vector3(0f, _thrustInput * thrustSpeed * Time.deltaTime, 0f));
         }
 
         private void ManageRotation()
@@ -33,6 +33,9 @@ namespace Movement
             _rigidbody.freezeRotation = true;
             transform.Rotate(new Vector3(0f, 0f, -_rotationInput * rotationSpeed * Time.deltaTime));
             _rigidbody.freezeRotation = false;
+            _rigidbody.constraints = RigidbodyConstraints.FreezeRotationX |
+                                     RigidbodyConstraints.FreezeRotationY | 
+                                     RigidbodyConstraints.FreezePositionZ;
         }
 
         private void OnThrust(InputValue value)
