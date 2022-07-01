@@ -6,18 +6,15 @@ namespace Core
     {
         [SerializeField] private int health = 100;
         
-        private GameObject _UICanvas;
-        
         private void Start()
         {
-            _UICanvas = GameObject.FindWithTag("UI");
-            _UICanvas.GetComponent<UI.Health>().SetHealth(health);
+            FindObjectOfType<UI.Health>().SetHealth(health);
         }
         
         public void TakeDamage(int value)
         {
             health -= value;
-            _UICanvas.GetComponent<UI.Health>().SetHealth(health);
+            FindObjectOfType<UI.Health>().SetHealth(health);
             if (health <= 0)
             {
                 Die();
@@ -27,6 +24,7 @@ namespace Core
         private void Die()
         {
             Destroy(gameObject);
+            FindObjectOfType<GameManager>().RestartLevel();
         }
     }
 }
