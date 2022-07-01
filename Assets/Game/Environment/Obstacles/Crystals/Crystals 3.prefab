@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 6697986170797601823}
   - component: {fileID: 3134143944892037798}
   - component: {fileID: 6736876508724920931}
+  - component: {fileID: 6411585522662525175}
   m_Layer: 0
   m_Name: Crystals 3
   m_TagString: Untagged
@@ -256,6 +257,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6411585522662525175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6697986170797601820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b2e0d74762dead4fbfb3fa9b983948d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightObjs:
+  - {fileID: 6697986170918235386}
+  - {fileID: 6697986169595441776}
+  pulseOffset: 0.204
+  period: 4
+  pulseFactor: 0
 --- !u!1 &6697986170918235384
 GameObject:
   m_ObjectHideFlags: 0

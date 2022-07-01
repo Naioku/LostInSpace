@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3148658042410276362}
   - component: {fileID: 4103374320438876593}
   - component: {fileID: 4780116848208152490}
+  - component: {fileID: 6469897822174190913}
   m_Layer: 0
   m_Name: Crystals 4
   m_TagString: Untagged
@@ -35,9 +36,9 @@ Transform:
   - {fileID: 652736491284394628}
   - {fileID: 7099980458156549612}
   - {fileID: 4253193307177024363}
+  - {fileID: 1231448324620289557}
   - {fileID: 4713488437721323152}
   - {fileID: 9128702679871446886}
-  - {fileID: 1231448324620289557}
   - {fileID: 5009061594558700218}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,6 +72,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6469897822174190913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694486519248092465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b2e0d74762dead4fbfb3fa9b983948d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightObjs:
+  - {fileID: 3298686305121142089}
+  - {fileID: 2635779232440656314}
+  - {fileID: 8696613759536987729}
+  pulseOffset: 0.498
+  period: 3
+  pulseFactor: 0
 --- !u!1 &2175512158631779910
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +412,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3148658042410276362}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &2635779232440656314
 Light:
@@ -583,7 +603,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3148658042410276362}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &3298686305121142089
 Light:
@@ -773,7 +793,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3148658042410276362}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -49.042, y: 39.876, z: 3.537}
 --- !u!33 &2512408220764124757
 MeshFilter:
