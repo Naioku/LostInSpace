@@ -1,7 +1,15 @@
+using UnityEngine;
+
 namespace Core
 {
-    public static class GameplayData
+    public class GameplayData : MonoBehaviour
     {
-        public static int PlayerMaxHealth = 100;
+        public int PlayerMaxHealth => 100;
+        public bool CollisionStateOn { get; set; } = true;
+        
+        public void Start()
+        {
+            CollisionStateOn = true;
+        }
     }
 }

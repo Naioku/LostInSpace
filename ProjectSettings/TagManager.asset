@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - RaycastArea
-  - UI
   layers:
   - Default
   - TransparentFX

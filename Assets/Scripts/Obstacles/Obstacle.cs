@@ -10,12 +10,13 @@ namespace Obstacles
         private void OnCollisionEnter(Collision collision)
         {
             var gameObj = collision.gameObject;
-            if (!gameObj.tag.Equals("Player")) return;
+            if (!FindObjectOfType<GameplayData>().CollisionStateOn ||
+                !gameObj.tag.Equals("Player")) return;
 
             var health = gameObj.GetComponent<Health>();
             if (health == null)
             {
-                print("No Health component!");
+                UnityEngine.Debug.LogError("No Health component!");
                 return;
             }
             

@@ -15,7 +15,7 @@ namespace UI
 
         private void Start()
         {
-            slider.maxValue = GameplayData.PlayerMaxHealth;
+            slider.maxValue = FindObjectOfType<GameplayData>().PlayerMaxHealth;
         }
 
         public void SetHealth(int value)
@@ -38,11 +38,11 @@ namespace UI
 
         private void RefreshSliderColor()
         {
-            if (slider.value > 0.5 * GameplayData.PlayerMaxHealth)
+            if (slider.value > 0.5 * FindObjectOfType<GameplayData>().PlayerMaxHealth)
             {
                 sliderFill.GetComponent<Image>().color = goodState;
             }
-            else if (slider.value > 0.25 * GameplayData.PlayerMaxHealth)
+            else if (slider.value > 0.25 * FindObjectOfType<GameplayData>().PlayerMaxHealth)
             {
                 sliderFill.GetComponent<Image>().color = warningState;
             }

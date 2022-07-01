@@ -1,3 +1,6 @@
+using Core;
+using Movement;
+using UI;
 using UnityEngine;
 
 namespace Platforms
@@ -13,7 +16,10 @@ namespace Platforms
 
         private void Finish()
         {
-            print("Level completed!");
+            FindObjectOfType<Messages>().FadeInMessage("Level completed!");
+            FindObjectOfType<PlayerMover>().enabled = false;
+            FindObjectOfType<GameplayData>().CollisionStateOn = false;
+            FindObjectOfType<GameManager>().LoadNextLevel();
         }
     }
 }
