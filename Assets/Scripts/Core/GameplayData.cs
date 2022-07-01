@@ -1,9 +1,7 @@
-using UnityEngine;
-
 namespace Core
 {
-    public class GameplayData : MonoBehaviour
+    public static class GameplayData
     {
-        public static int PlayerMaxHealth;
+        public static int PlayerMaxHealth = 100;
     }
 }
