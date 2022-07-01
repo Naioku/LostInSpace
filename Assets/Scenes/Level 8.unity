@@ -1596,7 +1596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6156517857354774819, guid: 9c6c41b907fded046b9ee360aa3ed565, type: 3}
       propertyPath: m_Name
-      value: IdleCamera
+      value: FollowCamera
       objectReference: {fileID: 0}
     - target: {fileID: 6156517857354774821, guid: 9c6c41b907fded046b9ee360aa3ed565, type: 3}
       propertyPath: m_RootOrder

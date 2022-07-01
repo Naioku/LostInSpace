@@ -17,9 +17,13 @@ namespace Platforms
         private void Finish()
         {
             FindObjectOfType<Messages>().FadeInMessage("Level completed!");
-            FindObjectOfType<PlayerMover>().enabled = false;
-            FindObjectOfType<GameplayData>().CollisionStateOn = false;
+            TurnDownPlayerMotion();
             FindObjectOfType<GameManager>().LoadNextLevel();
+        }
+
+        private static void TurnDownPlayerMotion()
+        {
+            FindObjectOfType<PlayerMover>().enabled = false;
         }
     }
 }

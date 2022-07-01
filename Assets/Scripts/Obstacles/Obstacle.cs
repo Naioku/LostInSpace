@@ -10,7 +10,8 @@ namespace Obstacles
         private void OnCollisionEnter(Collision collision)
         {
             var gameObj = collision.gameObject;
-            if (!FindObjectOfType<GameplayData>().CollisionStateOn ||
+            if (FindObjectOfType<GameplayData>() == null || 
+                !FindObjectOfType<GameplayData>().CollisionStateOn ||
                 !gameObj.tag.Equals("Player")) return;
 
             var health = gameObj.GetComponent<Health>();

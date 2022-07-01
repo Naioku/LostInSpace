@@ -1754,7 +1754,7 @@ PrefabInstance:
       objectReference: {fileID: 1027551496}
     - target: {fileID: 6156517857354774819, guid: 9c6c41b907fded046b9ee360aa3ed565, type: 3}
       propertyPath: m_Name
-      value: IdleCamera
+      value: FollowCamera
       objectReference: {fileID: 0}
     - target: {fileID: 6156517857354774821, guid: 9c6c41b907fded046b9ee360aa3ed565, type: 3}
       propertyPath: m_RootOrder
@@ -2909,7 +2909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5359700142366999258, guid: 9ec566233ab157845bfee678d1b91fe3, type: 3}
       propertyPath: field of view
-      value: 50
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 5359700142366999261, guid: 9ec566233ab157845bfee678d1b91fe3, type: 3}
       propertyPath: m_RootOrder
@@ -2917,15 +2917,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5359700142366999261, guid: 9ec566233ab157845bfee678d1b91fe3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.63
+      value: 18.98
       objectReference: {fileID: 0}
     - target: {fileID: 5359700142366999261, guid: 9ec566233ab157845bfee678d1b91fe3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.369997
+      value: 38.94
       objectReference: {fileID: 0}
     - target: {fileID: 5359700142366999261, guid: 9ec566233ab157845bfee678d1b91fe3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 5359700142366999261, guid: 9ec566233ab157845bfee678d1b91fe3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2937,7 +2937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5359700142366999261, guid: 9ec566233ab157845bfee678d1b91fe3, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1e-45
       objectReference: {fileID: 0}
     - target: {fileID: 5359700142366999261, guid: 9ec566233ab157845bfee678d1b91fe3, type: 3}
       propertyPath: m_LocalRotation.z
