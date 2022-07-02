@@ -21,7 +21,7 @@ namespace Obstacles
                 return;
             }
             
-            health.TakeDamage(damageValue);
+            health.TakeDamage(damageValue, collision.GetContact(0).point);
         }
     }
 }
