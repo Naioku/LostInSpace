@@ -7,9 +7,9 @@ namespace Movement
     {
         [SerializeField] private float thrustSpeed = 1f;
         [SerializeField] private float rotationSpeed = 1f;
-        [SerializeField] private ParticleSystem mainEngine;
-        [SerializeField] private ParticleSystem leftEngine;
-        [SerializeField] private ParticleSystem rightEngine;
+        [SerializeField] private ParticleSystem mainEngineVFX;
+        [SerializeField] private ParticleSystem leftEngineVFX;
+        [SerializeField] private ParticleSystem rightEngineVFX;
 
         private Rigidbody _rigidbody;
         private float _thrustInput;
@@ -26,13 +26,15 @@ namespace Movement
             ManageMainEngineParticles();
             ManageRotation();
             ManageLeftAndRightEngineParticles();
+            ManageEngineSFX();
         }
 
         private void OnDisable()
         {
-            mainEngine.Stop();
-            leftEngine.Stop();
-            rightEngine.Stop();
+            mainEngineVFX.Stop();
+            leftEngineVFX.Stop();
+            rightEngineVFX.Stop();
+            GetComponent<AudioSource>().Stop();
         }
 
         private void ManageThrust()
@@ -44,14 +46,14 @@ namespace Movement
         {
             if (_thrustInput != 0f)
             {
-                if (!mainEngine.isPlaying)
+                if (!mainEngineVFX.isPlaying)
                 {
-                    mainEngine.Play();
+                    mainEngineVFX.Play();
                 }
             }
             else
             {
-                mainEngine.Stop();
+                mainEngineVFX.Stop();
             }
         }
 
@@ -69,26 +71,44 @@ namespace Movement
         {
             if (_rotationInput == 1f)
             {
-                if (!leftEngine.isPlaying)
+                if (!leftEngineVFX.isPlaying)
                 {
-                    leftEngine.Play();
+                    leftEngineVFX.Play();
                 }
             }
             else
             {
-                leftEngine.Stop();
+                leftEngineVFX.Stop();
             }
             
             if (_rotationInput == -1f)
             {
-                if (!rightEngine.isPlaying)
+                if (!rightEngineVFX.isPlaying)
                 {
-                    rightEngine.Play();
+                    rightEngineVFX.Play();
                 }
             }
             else
             {
-                rightEngine.Stop();
+                rightEngineVFX.Stop();
+            }
+        }
+
+        private void ManageEngineSFX()
+        {
+            AudioSource engineSFX = GetComponent<AudioSource>();
+
+            if (_thrustInput != 0f ||
+                _rotationInput != 0f)
+            {
+                if (!engineSFX.isPlaying)
+                {
+                    engineSFX.Play();
+                }
+            }
+            else
+            {
+                engineSFX.Stop();
             }
         }
 

@@ -29,6 +29,11 @@ namespace Core
 
         private IEnumerator RestartLevelCoroutine()
         {
+            if (_loadNextLevelCoroutine != null)
+            {
+                StopCoroutine(_loadNextLevelCoroutine);
+            }
+
             yield return new WaitForSecondsRealtime(waitTimeBeforeLoadingLevel);
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

@@ -16,6 +16,7 @@ namespace Core
         public void TakeDamage(int value, Vector3 position)
         {
             Instantiate(damageVFX, position, Quaternion.identity).Play();
+            FindObjectOfType<AudioManager>().PlayDamageClip(position);
             health -= value;
             FindObjectOfType<UI.Health>().SetHealth(health);
             if (health <= 0)
@@ -27,8 +28,9 @@ namespace Core
         private void Die()
         {
             Vector3 rocketPosition = transform.position;
-            Destroy(gameObject);
             Instantiate(destructionVFX, rocketPosition, Quaternion.identity).Play();
+            FindObjectOfType<AudioManager>().PlayDestroyClip(rocketPosition);
+            Destroy(gameObject);
             FindObjectOfType<GameManager>().RestartLevel();
         }
     }
