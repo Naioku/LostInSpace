@@ -28,6 +28,7 @@ namespace UI
         public void FadeInMessage(string message)
         {
             displayedTextField.text = message;
+            displayedTextField.autoSizeTextContainer = true;
             StartCoroutine(FadeIn(fadeInTime));
         }
 

@@ -2004,6 +2004,30 @@ PrefabInstance:
       propertyPath: destroyVolume
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5097916717861986993, guid: 472dd7a005f6434448bcfcecaf38d268, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -1.0255803e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097916717861986993, guid: 472dd7a005f6434448bcfcecaf38d268, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000026636249
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097916717861986993, guid: 472dd7a005f6434448bcfcecaf38d268, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 2.731761e-23
+      objectReference: {fileID: 0}
+    - target: {fileID: 6462193226478387419, guid: 472dd7a005f6434448bcfcecaf38d268, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -1.0255803e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6462193226478387419, guid: 472dd7a005f6434448bcfcecaf38d268, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000026636249
+      objectReference: {fileID: 0}
+    - target: {fileID: 6462193226478387419, guid: 472dd7a005f6434448bcfcecaf38d268, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 2.731761e-23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 472dd7a005f6434448bcfcecaf38d268, type: 3}
 --- !u!1001 &3318521732221376771
