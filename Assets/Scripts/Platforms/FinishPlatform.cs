@@ -1,5 +1,4 @@
 using Core;
-using Movement;
 using UI;
 using UnityEngine;
 
@@ -17,13 +16,7 @@ namespace Platforms
         private void Finish()
         {
             FindObjectOfType<Messages>().FadeInMessage("Level completed!");
-            TurnDownPlayerMotion();
             FindObjectOfType<GameManager>().LoadNextLevel();
-        }
-
-        private static void TurnDownPlayerMotion()
-        {
-            FindObjectOfType<PlayerMover>().enabled = false;
         }
     }
 }
